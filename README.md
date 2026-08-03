@@ -2,12 +2,11 @@
 
 # Aligned DP-BART
 
-Preference-aligned differentially private text rewriting.
-Extends DP-BART with DPO/VPO so privatized outputs are more acceptable without weakening privacy guarantees.
+Preference-aligned differentially private text privatization.
 
 </div>
 
-Code for the paper: *Aligning Language Models for Differentially Private Text Generation:
+Anonymous repository for the August 2026 ARR submission: *Aligning Language Models for Differentially Private Text Generation:
 A Human-centered Pathway for Better Acceptability and Usability*
 
 ## Installation
@@ -31,7 +30,7 @@ BLEURT is not on PyPI, so the separate `git+` install is required.
 
 ## Data and models
 
-Training data is included in `data/training/`. Pretrained model checkpoints can be downloaded from: *[Google Drive link TBD]*
+Training data is included in `data/training/`. Aligned model checkpoints can be downloaded from: [Models](https://drive.google.com/drive/folders/1imx_YY7cBRF_VaTrY8W_FkzuBem5DPiK?usp=sharing)
 
 Place checkpoints in `models/`.
 
