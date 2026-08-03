@@ -1,0 +1,15 @@
+# Streamlit Configuration
+# This file contains non-sensitive configuration settings
+
+[app]
+# Environment mode determines what information is shown to respondents
+# Options: "development" or "production"
+# - development: Shows reference text and metadata (for testing)
+# - production: Hides reference text and metadata (for actual survey)
+environment = "production"
+
+[client]
+showSidebarNavigation = false
+
+[server]
+runOnSave = true

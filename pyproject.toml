@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aligned-dp"
+version = "0.1.0"
+description = "Preference-aligned differentially private text rewriting with DP-BART."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["differential-privacy", "nlp", "dpo", "vpo", "text-rewriting", "bart"]
+
+# Core dependencies for training and privatized text generation.
+#
+# NOTE: torch is intentionally omitted. Install the build matching your
+# CUDA/Metal setup FIRST (see https://pytorch.org/get-started/locally/),
+# then `pip install -e .`.
+dependencies = [
+    "transformers==4.57.3",
+    "trl==0.28.0",
+    "datasets",
+    "accelerate",
+    "sentencepiece",
+    "safetensors",
+    "huggingface_hub",
+    "numpy==2.1.3",
+    "pandas==2.2.3",
+    "mpmath",
+    "scipy",
+    "tqdm==4.67.1",
+    "wandb==0.19.1",
+]
+
+[project.optional-dependencies]
+# Metric Acceptability scoring pipeline. Pulls in TensorFlow via BLEURT, which
+# is a much heavier install than the core stack.
+#
+# BLEURT is not on PyPI; install it separately after this group:
+#   pip install git+https://github.com/google-research/bleurt.git
+scoring = [
+    "evaluate==0.4.6",
+    "bert-score==0.3.13",
+    "textstat==0.7.12",
+    "tensorflow",
+    "tf-keras",
+]
+
+[project.scripts]
+aligned-dp-train = "aligned_dp.train:main"
+aligned-dp-privatize = "aligned_dp.privatize:main"
+aligned-dp-score = "aligned_dp.score:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

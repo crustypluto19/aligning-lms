@@ -1,0 +1,30 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# OS
+.DS_Store
+
+# Environments / secrets
+.env
+.env.local
+.venv/
+venv/
+
+# Streamlit secrets (ship .streamlit/secrets.toml.example instead)
+.streamlit/secrets.toml
+survey/.streamlit/secrets.toml
+
+# Experiment tracking & model artifacts
+wandb/
+outputs/
+results_*/
+
+# Tooling caches
+.deepeval/
