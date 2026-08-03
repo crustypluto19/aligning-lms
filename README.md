@@ -1,6 +1,6 @@
 <div align="center">
 
-# Aligned DP-BART
+# Aligning Language Models for Differentially Private Text Generation
 
 Preference-aligned differentially private text privatization.
 
