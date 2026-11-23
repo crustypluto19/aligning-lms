@@ -6,7 +6,7 @@ Preference-aligned differentially private text privatization.
 
 </div>
 
-Anonymous repository for the August 2026 ARR submission: *Aligning Language Models for Differentially Private Text Generation:
+Repository for the EACL 2027 paper: *Aligning Language Models for Differentially Private Text Generation:
 A Human-centered Pathway for Better Acceptability and Usability*
 
 ## Installation
